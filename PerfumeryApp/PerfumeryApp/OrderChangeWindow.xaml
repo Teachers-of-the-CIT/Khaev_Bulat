@@ -1,0 +1,23 @@
+﻿<Window x:Class="PerfumeryApp.OrderChangeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PerfumeryApp"
+        mc:Ignorable="d"
+        Title="Изменить заказ" Height="250" Width="200" MinHeight="250" MinWidth="200">
+    <StackPanel>
+        <Label Content="Дата получения:"/>
+        <DatePicker x:Name="getDateTb"/>
+        <Label Content="Пункт выдачи:"/>
+        <ComboBox Name="pointCmb"/>
+        <Label Content="Код выдачи:"/>
+        <TextBox x:Name="codeTb"/>
+        <Label Content="Статус:"/>
+        <ComboBox x:Name="statusTb">
+            <ComboBoxItem Content="Новый"/>
+            <ComboBoxItem Content="Завершен"/>
+        </ComboBox>
+        <Button x:Name="goBtn" Click="goBtn_Click" Content="Готово"/>
+    </StackPanel>
+</Window>
