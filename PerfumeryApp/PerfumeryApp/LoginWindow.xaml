@@ -1,0 +1,17 @@
+﻿<Window x:Class="PerfumeryApp.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PerfumeryApp"
+        mc:Ignorable="d"
+        Title="Вход" Height="150" Width="200" MinHeight="150" MinWidth="200">
+    <StackPanel>
+        <Label Content="Логин:"/>
+        <TextBox x:Name="loginTb"/>
+        <Label Content="Пароль:"/>
+        <PasswordBox x:Name="passTb"/>
+        <Button x:Name="goBtn" Click="goBtn_Click" Content="Войти"/>
+        <Button x:Name="regBtn" Click="regBtn_Click" Content="Зарегистрироваться"/>
+    </StackPanel>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="PerfumeryApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PerfumeryApp"
+        mc:Ignorable="d"
+        Title="Perfumery" Height="450" Width="800">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Top" LastChildFill="False">
+            <Label Name="logLabel" Content=""/>
+            <Button DockPanel.Dock="Right" x:Name="loginBtn" Content="Войти" Click="loginBtn_Click"/>
+        </DockPanel>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Height="30">
+            <Button x:Name="ordersBtn" Content="Заказы" Click="ordersBtn_Click" IsEnabled="False"/>
+        </StackPanel>
+        <DataGrid DockPanel.Dock="Top" x:Name="goodsDataGrid" AutoGenerateColumns="False" IsReadOnly="True"  SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}"/>
+                <DataGridTextColumn Header="Категория" Binding="{Binding Category}"/>
+                <DataGridTextColumn Header="Скидка" Binding="{Binding Discount}"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding Quantity}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="goodBtn" Content="Подробнее" Click="goodBtn_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>
